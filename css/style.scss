@@ -28,8 +28,17 @@ $mainColor: #496999;
 $text: #7a7a7a;
 $black: #000;
 
-h2,.h1{
-    color:$mainColor
+h2,
+.h1 {
+  color: $mainColor;
+}
+.overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.3);
 }
 /*nav */
 
@@ -48,8 +57,8 @@ h2,.h1{
   }
   .navbar-brand {
     img {
-      width: 140px !important;
-      height: 70px !important;
+      width: 150px !important;
+      height: 100px !important;
       object-fit: cover;
     }
   }
@@ -161,7 +170,7 @@ h2,.h1{
 }
 
 .slider {
-  background-image: url(../imgs/header.jpeg);
+  background-image: url(../imgs/network/header.webp);
   position: relative;
   height: calc(100vh);
   padding-top: 120px;
@@ -515,13 +524,14 @@ h2,.h1{
 
 footer {
   background-color: $mainColor;
-  padding: 50px 0  80px 0;
+  padding: 50px 0 80px 0;
   position: relative;
   h3 {
     color: #fff;
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 16px;font-weight: bold;
+    margin-bottom: 16px;
+    font-weight: bold;
   }
   .left-footer {
     text-align: start;
@@ -591,7 +601,7 @@ footer {
     padding: 24px;
     span {
       font-size: 16px;
-      color:#fff
+      color: #fff;
     }
     .social {
       a {
@@ -614,117 +624,213 @@ footer {
   }
 }
 
-
-
-/*networking*/  
-.networking{
-    background-image: url(../imgs/net.jpg);
-    .caption{
-        position: absolute;
-        left: 5%;
-        bottom: 10%;
-        color: #fff;
-        text-align: start;
-        span{
-            font-weight: 600;
-            font-size: 18px;
-            margin-bottom: 12px;
-            display: block;
-        }
-        h2{
-            font-size: 36px;
-            font-weight: bold;
-            @media(max-width:575px){
-                font-size: 28px;;
-            }
-        }
+/*networking*/
+.networking {
+  background-image: url(../imgs/net.png);
+  position: relative;
+  .overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+  .caption {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    color: #fff;
+    text-align: start;
+    span {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 12px;
+      display: block;
     }
+    h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #fff;;
+      @media (max-width: 575px) {
+        font-size: 28px;
+      }
+    }
+  }
 }
-.description{
-    padding: 64px 0 ;
+.description {
+  padding: 64px 0;
+  h2 {
+    color: $secColor;
+    font-weight: bold;
+    margin-bottom: 32px;
+  }
+  p {
+    font-weight: 600;
+  }
+}
+
+.divisions {
+  .row {
+    margin: 0;
+  }
+  .squared-text {
+    padding: 30px 55px;
+    color: #ffffff;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-orient: vertical;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .overlay{
+      background-color: rgba(0,0,0,.7);
+    }
+  }
+  .squared-text__data{
+    position: relative;
+  }
+  .gbg-cblue {
+    background-image: url(../imgs/network/net-ms.jpg);
+   
+  }
+  .gbg-cyan {
+    background-image: url(../imgs/network/nfs.jpg);
+  }
+  .gbg-orange {
+    background-image: url(../imgs/network/mobility.jpeg);
+  }
+  .gbg-purple {
+    background-image: url(../imgs/network/routing.jpg);
+  }
+  /*h*/
+  .squared-text__title {
+    margin: 0 0 25px;
+    font-weight: 400;
+    word-break: break-word;
+    color:#fff;
+  }
+  /*p*/
+  .squared-text__brief {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.45;
+    overflow: hidden;
+    margin: 0;
+  }
+}
+/*dataSc*/
+.dataSc {
+  background-image: url(../imgs/dataSc.jpg);
+  .overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
+  .caption {
+    h2 {
+      color: #fff;
+    }
+  }
+}
+
+.sc-divisions {
+  padding: 64px 0;
+  background-color: $secColor;
+  .row {
+    margin-bottom: 36px;
+  }
+  .reverse {
+    @media (max-width: 991px) {
+      flex-direction: column-reverse;
+    }
+  }
+  img {
+    border-radius: 8px;
+    margin-bottom: 24px;
+  }
+  .sc-content {
+    color: #fff;
+    h2 {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+
+
+.cell-phone{
+  background-image: url(../imgs/network/cell-phone.jpg);
+}
+
+
+.sd-wan{
+  background-image: url(../imgs/network/sd-wan.jpg);
+  position: relative;
+}
+.security{
+  background-image: url(../imgs/network/ssecurity.jpg);
+
+}
+
+.cloud-head{
+  background-image: url(../imgs/network/cloud.jpg);
+
+}
+
+.cloud-cp{
+  background-color: #f1f1f1;
+  .sc-content{
+    color: $black;
+    text-align: center;
+    margin-bottom: 24px;
     h2{
-        color: $secColor;
-        font-weight: bold;
-        margin-bottom: 32px;
+      color: $black;
+      font-size: 20px;
     }
-    p{
-        font-weight: 600;
-    }
+  }
+  svg{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: $secColor;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 24px;
+    padding: 16px;
+  }
 }
 
-
-.divisions{
-    .row{
-        margin: 0;
-    }
-    .squared-text {
-        padding: 30px 55px;
-        color: #ffffff;
-        display: -webkit-box;
-        -webkit-box-pack: center;
-        -webkit-box-orient: vertical;
-    }
-    .gbg-cblue {
-        background: #9d7bee linear-gradient(to bottom, $secColor, $mainColor);
-    }
-    .gbg-cyan {
-        background: #1aa0a2 linear-gradient(to bottom, #1aa0a2, #23a0cb);
-    }
-    .gbg-orange {
-        background: #f3982c linear-gradient(to bottom, $text, $black);
-    }
-    .gbg-purple {
-        background: #9c5d92 linear-gradient(to bottom, $secColor, $secColor);
-    }
-    /*h*/
-    .squared-text__title {
-        margin: 0 0 25px;
-        font-weight: 400;
-        word-break: break-word;
-    }
-    /*p*/
-    .squared-text__brief {
-        font-weight: 300;
-        font-size: 21px;
-        margin-bottom: 20px;
-        line-height: 1.45;
-        overflow: hidden;
-    }
+/*rtl */
+body[dir="rtl"] {
+  .about-us .about-content h2:after {
+    left: auto;
+    right: 0;
+  }
+  .about-us .img-cont img {
+    transform: translate(-25px, 25px);
+  }
+  .about-us .img-cont {
+    border-radius: 0px 10px 0px;
+  }
+  .message .img-cont {
+    border-radius: 10px 0 0 0;
+  }
+  .message .img-cont img {
+    transform: translate(25px, 25px);
+  }
+  .contact-us .send-message .inputs-holder .form-group svg {
+    left: auto;
+    right: 9px;
+  }
+  .networking .caption {
+    left: auto;
+    right: 5%;
+  }
 }
-
-
-
-
-
-
-
-
-
-
- /*rtl */  
- body[dir = "rtl"]{
-    .about-us .about-content h2:after{
-        left: auto;
-        right: 0;
-    }
-    .about-us .img-cont img{
-       transform: translate(-25px, 25px)
-    }
-    .about-us .img-cont{
-        border-radius: 0px 10px 0px;
-    }
-    .message .img-cont{
-        border-radius: 10px 0 0 0 ;
-    }
-    .message .img-cont img{
-        transform: translate(25px, 25px);
-    }
-    .contact-us .send-message .inputs-holder .form-group svg{
-        left: auto;
-        right: 9px;
-    }
-    .networking .caption{
-        left: auto;
-        right: 5%;
-    }
- }

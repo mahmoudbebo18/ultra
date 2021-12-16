@@ -15,8 +15,17 @@ body {
   text-align: start; }
 
 /*vars */
-h2, .h1 {
+h2,
+.h1 {
   color: #496999; }
+
+.overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); }
 
 /*nav */
 .navbar {
@@ -31,8 +40,8 @@ h2, .h1 {
     .navbar .container {
       padding: 0 15px; } }
   .navbar .navbar-brand img {
-    width: 140px !important;
-    height: 70px !important;
+    width: 150px !important;
+    height: 100px !important;
     object-fit: cover; }
   .navbar .navbar-collapse {
     justify-content: space-between; }
@@ -111,7 +120,7 @@ h2, .h1 {
   cursor: pointer; }
 
 .slider {
-  background-image: url(../imgs/header.jpeg);
+  background-image: url(../imgs/network/header.webp);
   position: relative;
   height: calc(100vh);
   padding-top: 120px;
@@ -403,7 +412,7 @@ h2, .h1 {
 /*/*footer*/
 footer {
   background-color: #496999;
-  padding: 50px 0  80px 0;
+  padding: 50px 0 80px 0;
   position: relative; }
   footer h3 {
     color: #fff;
@@ -479,7 +488,15 @@ footer {
 
 /*networking*/
 .networking {
-  background-image: url(../imgs/net.jpg); }
+  background-image: url(../imgs/net.png);
+  position: relative; }
+  .networking .overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); }
   .networking .caption {
     position: absolute;
     left: 5%;
@@ -493,7 +510,8 @@ footer {
       display: block; }
     .networking .caption h2 {
       font-size: 36px;
-      font-weight: bold; }
+      font-weight: bold;
+      color: #fff; }
       @media (max-width: 575px) {
         .networking .caption h2 {
           font-size: 28px; } }
@@ -517,25 +535,97 @@ footer {
     color: #ffffff;
     display: -webkit-box;
     -webkit-box-pack: center;
-    -webkit-box-orient: vertical; }
+    -webkit-box-orient: vertical;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+    .divisions .squared-text .overlay {
+      background-color: rgba(0, 0, 0, 0.7); }
+  .divisions .squared-text__data {
+    position: relative; }
   .divisions .gbg-cblue {
-    background: #9d7bee linear-gradient(to bottom, #158ac0, #496999); }
+    background-image: url(../imgs/network/net-ms.jpg); }
   .divisions .gbg-cyan {
-    background: #1aa0a2 linear-gradient(to bottom, #1aa0a2, #23a0cb); }
+    background-image: url(../imgs/network/nfs.jpg); }
   .divisions .gbg-orange {
-    background: #f3982c linear-gradient(to bottom, #7a7a7a, #000); }
+    background-image: url(../imgs/network/mobility.jpeg); }
   .divisions .gbg-purple {
-    background: #9c5d92 linear-gradient(to bottom, #158ac0, #158ac0); }
+    background-image: url(../imgs/network/routing.jpg); }
   .divisions .squared-text__title {
     margin: 0 0 25px;
     font-weight: 400;
-    word-break: break-word; }
+    word-break: break-word;
+    color: #fff; }
   .divisions .squared-text__brief {
-    font-weight: 300;
-    font-size: 21px;
-    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 17px;
     line-height: 1.45;
-    overflow: hidden; }
+    overflow: hidden;
+    margin: 0; }
+
+/*dataSc*/
+.dataSc {
+  background-image: url(../imgs/dataSc.jpg); }
+  .dataSc .overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); }
+  .dataSc .caption h2 {
+    color: #fff; }
+
+.sc-divisions {
+  padding: 64px 0;
+  background-color: #158ac0; }
+  .sc-divisions .row {
+    margin-bottom: 36px; }
+  @media (max-width: 991px) {
+    .sc-divisions .reverse {
+      flex-direction: column-reverse; } }
+  .sc-divisions img {
+    border-radius: 8px;
+    margin-bottom: 24px; }
+  .sc-divisions .sc-content {
+    color: #fff; }
+    .sc-divisions .sc-content h2 {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 24px; }
+
+.cell-phone {
+  background-image: url(../imgs/network/cell-phone.jpg); }
+
+.sd-wan {
+  background-image: url(../imgs/network/sd-wan.jpg);
+  position: relative; }
+
+.security {
+  background-image: url(../imgs/network/ssecurity.jpg); }
+
+.cloud-head {
+  background-image: url(../imgs/network/cloud.jpg); }
+
+.cloud-cp {
+  background-color: #f1f1f1; }
+  .cloud-cp .sc-content {
+    color: #000;
+    text-align: center;
+    margin-bottom: 24px; }
+    .cloud-cp .sc-content h2 {
+      color: #000;
+      font-size: 20px; }
+  .cloud-cp svg {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #158ac0;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 24px;
+    padding: 16px; }
 
 /*rtl */
 body[dir="rtl"] .about-us .about-content h2:after {
