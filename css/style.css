@@ -627,6 +627,30 @@ footer {
     margin-bottom: 24px;
     padding: 16px; }
 
+.manage-head {
+  background-image: url(../imgs/network/managment.jpg); }
+
+.managment .row {
+  margin-bottom: 24px; }
+
+.cam-desc {
+  padding-bottom: 0; }
+
+.camera-head {
+  background-image: url(../imgs/network/camera.jpg);
+  position: relative; }
+
+.camera-div {
+  background-color: #ffffff;
+  padding-top: 24px; }
+  .camera-div .sc-content {
+    color: #000; }
+    .camera-div .sc-content h2 {
+      color: #000; }
+
+.mob-head {
+  background-image: url(../imgs/network/mob-app.jpg); }
+
 /*rtl */
 body[dir="rtl"] .about-us .about-content h2:after {
   left: auto;
