@@ -1,19 +1,61 @@
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+  //assign vars 
+
+  $name =  filter_var($_POST['name'], FILTER_SANITIZE_STRING);  //filtring user input to include only strings 
+  $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); //filtring email input to include only email 
+  $phone = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT); //filtring phone input to include only phone 
+  $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING); //filtring message input to include only message 
+  // array of errors 
+
+  $formErrors = array();
+  if (strlen($name) <= 3) {
+    $formErrors[] = 'Name Must be More Than 3 Characters ';
+  }
+  if (strlen($message) < 10) {
+    $formErrors[] = 'Message  Must be More Than 10 Characters ';
+  }
+
+  $headers = 'From : ' . $email;
+  $myEmail = 'mahmoudelkhateb18@gmail.com';
+  $subject = 'Contact Form';
+  if (empty($formErrors)) {
+    mail($myEmail, $subject, $message, $headers);
+    $name = '';
+    $email = '';
+    $phone = '';
+    $message = '';
+    $success = '<div class="success-msg alert alert-success"> 
+            <h5> Thanks For Your Message  </h5>
+            <p> We Will Back For You Soon  </p>
+        </div>';
+  }
+}
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body dir="rtl">
-    <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body dir="rtl">
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index-ar.html">
           <img src="imgs/logo.jpeg" width="120" height="60" alt="logo" />
         </a>
         <button
@@ -30,7 +72,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="#"
                 >الرئيسية
                 <span class="sr-only">(current)</span>
@@ -40,18 +82,18 @@
               <a class="nav-link" href="#">نبذة عنا </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"> رسالتنا </a>
+              <a class="nav-link" href="#">رسالتنا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">خدماتنا </a>
+              <a class="nav-link" href="#">خدماتنا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">شركاؤنا </a>
+              <a class="nav-link" href="#">شركاؤنا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">التوظيف </a>
+              <a class="nav-link" href="#">التوظيف</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="contact-ar.html"> اتصل بنا </a>
             </li>
           </ul>
@@ -86,7 +128,7 @@
                 </svg>
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a href="contact.html" class="dropdown-item">
+                <a href="camera.html" class="dropdown-item">
                   <img
                     src="imgs/enFlag.png"
                     alt=""
@@ -95,7 +137,7 @@
                   />
                   English
                 </a>
-                <a href="contact-ar.html" class="dropdown-item">
+                <a href="camera-ar.html" class="dropdown-item">
                   <img
                     src="imgs/arFlag.png"
                     alt=""
@@ -112,136 +154,105 @@
     </nav>
     <!-- End Nav -->
 
-    <div class="contact-us">
-      <div class="container">
-        <h2 class="contact-head">تواصل معنا</h2>
-        <p class="contact-desc">ابق على تواصل</p>
+  <div class="contact-us">
+    <div class="container">
+      <h2 class="contact-head">
+        تواصل معنا 
+      </h2>
+      <p class="contact-desc">
+       ابق على تواصل 
+      </p>
 
-        <form class="send-message">
-          <div class="d-flex inputs-holder">
-            <div class="form-group">
-              <input class="form-control" type="text" placeholder="الاسم " />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-user"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="#597e8d"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <circle cx="12" cy="7" r="4" />
-                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-              </svg>
-            </div>
-            <div class="form-group">
-              <input class="form-control" type="email" placeholder="البريد" />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-at"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="#597e8d"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <circle cx="12" cy="12" r="4" />
-                <path
-                  d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"
-                />
-              </svg>
-            </div>
-            <div class="form-group">
-              <input class="form-control" type="number" placeholder="الهاتف" />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-device-mobile"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="#597e8d"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="7" y="4" width="10" height="16" rx="1" />
-                <line x1="11" y1="5" x2="13" y2="5" />
-                <line x1="12" y1="17" x2="12" y2="17.01" />
-              </svg>
-            </div>
-            <div class="form-group">
-              <input
-                class="form-control"
-                type="text"
-                placeholder="عنوان الرسالة"
-              />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-edit"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="#597e8d"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3"
-                />
-                <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
-                <line x1="16" y1="5" x2="19" y2="8" />
-              </svg>
-            </div>
-            <div class="form-group the-message-holder">
-              <textarea
-                class="form-control"
-                rows="3"
-                type="text"
-                placeholder="الرسالة"
-              ></textarea>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-mail-forward"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="#597e8d"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5"
-                />
-                <path d="M3 6l9 6l9 -6" />
-                <path d="M15 18h6" />
-                <path d="M18 15l3 3l-3 3" />
-              </svg>
-            </div>
-            <div class="form-group">
-              <button class="btn btn-primary">ارسال</button>
-            </div>
+      <form class="send-message myForm" action=" <?php echo $_SERVER['PHP_SELF'] ?> " method="POST">
+        <!-- server side validation  -->
+        <?php if (!empty($formErrors)) { ?>
+          <div class="alert alert-danger">
+            <?php
+            foreach ($formErrors as $error) {
+              echo $error . '<br/>';
+            }
+
+            ?>
+
           </div>
-        </form>
-      </div>
+        <?php } ?>
+
+        <?php if (isset($success)) {
+          echo $success;
+        } ?>
+        <div class="d-flex  inputs-holder">
+          <div class="form-group">
+            <input class="form-control userName" name="name" type="text" value="<?php if (isset($name)) {
+                                                                                  echo $name;
+                                                                                } ?>" placeholder="الاسم " />
+
+            <div class="alert alert-danger my-alert">
+              يجب أن يكون الاسم 3 حروف فأكثر
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="7" r="4" />
+              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+            </svg>
+          </div>
+          <div class="form-group">
+            <input class="form-control myMail" name="email" type="email" value="<?php if (isset($email)) {
+                                                                                  echo $email;
+                                                                                } ?>" placeholder="البريد " />
+
+            <div class="alert alert-danger my-alert">
+              حقل البريد مطلوب
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-at" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="12" r="4" />
+              <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28" />
+            </svg>
+
+
+          </div>
+          <div class="form-group">
+            <input class="form-control" name="phone" type="number" value="<?php if (isset($phone)) {
+                                                                            echo $phone;
+                                                                          } ?>" placeholder="الهاتف" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <rect x="7" y="4" width="10" height="16" rx="1" />
+              <line x1="11" y1="5" x2="13" y2="5" />
+              <line x1="12" y1="17" x2="12" y2="17.01" />
+            </svg>
+          </div>
+          <div class="form-group">
+            <input class="form-control"type="text" placeholder="عنوان الرسالة " />
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
+              <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
+              <line x1="16" y1="5" x2="19" y2="8" />
+            </svg>
+          </div>
+          <div class="form-group  the-message-holder">
+            <textarea class="form-control myMsg" rows="3" name="message" type="text" placeholder="الرسالة "></textarea>
+            <div class="alert alert-danger my-alert">
+                        يجب أن يكون محتوى الرسالة اكبر من 10 أحرف
+                    </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-forward" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" />
+              <path d="M3 6l9 6l9 -6" />
+              <path d="M15 18h6" />
+              <path d="M18 15l3 3l-3 3" />
+            </svg>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary"> ارسال  </button>
+          </div>
+        </div>
+      </form>
     </div>
-    <!-- Footer -->
-    <footer class="footer">
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-mg-12 footer-about">
@@ -319,7 +330,7 @@
                   <line x1="15" y1="9" x2="20" y2="4" />
                   <polyline points="15 5 15 9 19 9" />
                 </svg>
-                <span> +249117177717 (للدعم ) </span>
+                <span> +249117177717 (للدعايا ) </span>
               </li>
             </ul>
           </div>
@@ -352,9 +363,9 @@
           align-items-center
         "
       >
-        <span>جميع الحقوق محفوظة &copy;</span>
+        <span>جميع الحقوق محفوظة  &copy; 2021</span>
         <div class="social">
-          <a href="">
+          <a href="https://www.facebook.com/UltraTech.Sudan/" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-facebook"
@@ -373,7 +384,7 @@
               />
             </svg>
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/Ultratech.Sudan/" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-instagram"
@@ -392,7 +403,7 @@
               <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
             </svg>
           </a>
-          <a href="">
+          <a href="https://twitter.com/Ultratech_Sudan" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-twitter"
@@ -411,12 +422,32 @@
               />
             </svg>
           </a>
+          <a href="#" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-youtube"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#ffffff"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <rect x="3" y="5" width="18" height="14" rx="4" />
+              <path d="M10 9l5 3l-5 3z" />
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

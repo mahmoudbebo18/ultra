@@ -548,6 +548,9 @@ footer {
         span {
           color: #fff;
           font-size: 14px;
+          br {
+            display: none;
+          }
         }
       }
     }
@@ -651,7 +654,7 @@ footer {
     h2 {
       font-size: 36px;
       font-weight: bold;
-      color: #fff;;
+      color: #fff;
       @media (max-width: 575px) {
         font-size: 28px;
       }
@@ -683,16 +686,15 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    .overlay{
-      background-color: rgba(0,0,0,.7);
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
     }
   }
-  .squared-text__data{
+  .squared-text__data {
     position: relative;
   }
   .gbg-cblue {
     background-image: url(../imgs/network/net-ms.jpg);
-   
   }
   .gbg-cyan {
     background-image: url(../imgs/network/nfs.jpg);
@@ -708,7 +710,7 @@ footer {
     margin: 0 0 25px;
     font-weight: 400;
     word-break: break-word;
-    color:#fff;
+    color: #fff;
   }
   /*p*/
   .squared-text__brief {
@@ -762,39 +764,34 @@ footer {
   }
 }
 
-
-
-.cell-phone{
+.cell-phone {
   background-image: url(../imgs/network/cell-phone.jpg);
 }
 
-
-.sd-wan{
+.sd-wan {
   background-image: url(../imgs/network/sd-wan.jpg);
   position: relative;
 }
-.security{
+.security {
   background-image: url(../imgs/network/ssecurity.jpg);
-
 }
 
-.cloud-head{
+.cloud-head {
   background-image: url(../imgs/network/cloud.jpg);
-
 }
 
-.cloud-cp{
+.cloud-cp {
   background-color: #f1f1f1;
-  .sc-content{
+  .sc-content {
     color: $black;
     text-align: center;
     margin-bottom: 24px;
-    h2{
+    h2 {
       color: $black;
       font-size: 20px;
     }
   }
-  svg{
+  svg {
     display: block;
     width: 100px;
     height: 100px;
@@ -807,14 +804,11 @@ footer {
   }
 }
 
-
-.manage-head{
+.manage-head {
   background-image: url(../imgs/network/managment.jpg);
 }
-.managment{
-
-
-  .row{
+.managment {
+  .row {
     margin-bottom: 24px;
   }
 }
@@ -822,31 +816,28 @@ footer {
   padding-bottom: 0;
 }
 
-.camera-head{
+.camera-head {
   background-image: url(../imgs/network/camera.jpg);
   position: relative;
 }
-.camera-div{
+.camera-div {
   background-color: #ffffff;
   padding-top: 24px;
-  .sc-content{
+  .sc-content {
     color: $black;
-    h2{
-      color:$black ;
+    h2 {
+      color: $black;
     }
   }
 }
 
-
-
-.mob-head{
+.mob-head {
   background-image: url(../imgs/network/mob-app.jpg);
-
 }
 
-
-
-
+.mobile-apps {
+  background-image: url(../imgs/network/mob-app.jpg);
+}
 
 /*rtl */
 body[dir="rtl"] {
@@ -873,5 +864,54 @@ body[dir="rtl"] {
   .networking .caption {
     left: auto;
     right: 5%;
+  }
+}
+
+.my-alert {
+  background: transparent;
+  border: none;
+  color: #f00;
+  text-align: end;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  padding-inline-end: 0;
+  padding-top: 5px;
+  padding-bottom: 0;
+  display: none;
+}
+
+
+
+.Whatsapp {
+  position: fixed;
+  left: 2%;
+  bottom: 4%;
+  background: #20b70e;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  transition: .3s;
+  &:hover {
+      transform: scale(1.01);
+      color: #fff
+  }
+}
+
+.animated {
+  animation: crescendo 1.5s alternate infinite ease-in;
+}
+
+@keyframes crescendo {
+  0% {
+      transform: scale(.9);
+  }
+  100% {
+      transform: scale(1.1);
   }
 }

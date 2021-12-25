@@ -434,6 +434,8 @@ footer {
         footer .left-footer ul li span {
           color: #fff;
           font-size: 14px; }
+          footer .left-footer ul li span br {
+            display: none; }
   footer .footer-about {
     text-align: start; }
     footer .footer-about p {
@@ -651,6 +653,9 @@ footer {
 .mob-head {
   background-image: url(../imgs/network/mob-app.jpg); }
 
+.mobile-apps {
+  background-image: url(../imgs/network/mob-app.jpg); }
+
 /*rtl */
 body[dir="rtl"] .about-us .about-content h2:after {
   left: auto;
@@ -669,5 +674,45 @@ body[dir="rtl"] .contact-us .send-message .inputs-holder .form-group svg {
 body[dir="rtl"] .networking .caption {
   left: auto;
   right: 5%; }
+
+.my-alert {
+  background: transparent;
+  border: none;
+  color: #f00;
+  text-align: end;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  padding-inline-end: 0;
+  padding-top: 5px;
+  padding-bottom: 0;
+  display: none; }
+
+.Whatsapp {
+  position: fixed;
+  left: 2%;
+  bottom: 4%;
+  background: #20b70e;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  transition: .3s; }
+  .Whatsapp:hover {
+    transform: scale(1.01);
+    color: #fff; }
+
+.animated {
+  animation: crescendo 1.5s alternate infinite ease-in; }
+
+@keyframes crescendo {
+  0% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1.1); } }
 
 /*# sourceMappingURL=style.css.map */
