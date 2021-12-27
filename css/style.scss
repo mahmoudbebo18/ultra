@@ -84,6 +84,10 @@ h2,
       }
     }
   }
+  .dropdown-menu{
+    left: auto;
+    right: 0;
+  }
   .sign {
     display: flex;
     @media (max-width: 991px) {
@@ -179,6 +183,9 @@ h2,
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  @media(max-width:767px){
+    height: auto;
+  }
   .head {
     height: 250px;
     width: 70%;
@@ -238,10 +245,15 @@ h2,
 
 .about-us {
   padding: 64px 0;
+  padding-bottom: 36px;
   background-color: #f1f1f1;
   .about-content {
     h2 {
       position: relative;
+      @media(max-width:425px){
+        font-size: 24px;
+        font-weight: 600;
+      }
       &:after {
         content: "";
         position: absolute;
@@ -280,15 +292,12 @@ h2,
     }
   }
   .img-cont {
-    border: 15px solid $secColor;
-    border-radius: 10px 0 10px;
     margin: 32px auto;
     @media (max-width: 991px) {
       margin: 24px auto !important;
     }
     img {
       width: 100%;
-      transform: translate(25px, 25px);
       transition: 0.4s all ease-in-out;
     }
   }
@@ -297,6 +306,9 @@ h2,
 /*message*/
 
 .message {
+ @media(max-width:991px){
+  padding-top: 0;
+ }
   ul {
     margin-top: 40px;
     li {
@@ -311,12 +323,7 @@ h2,
       }
     }
   }
-  .img-cont {
-    border-radius: 0px 10px 0px;
-    img {
-      transform: translate(-25px, 25px);
-    }
-  }
+ 
 }
 
 /*services */
@@ -844,18 +851,6 @@ body[dir="rtl"] {
     left: auto;
     right: 0;
   }
-  .about-us .img-cont img {
-    transform: translate(-25px, 25px);
-  }
-  .about-us .img-cont {
-    border-radius: 0px 10px 0px;
-  }
-  .message .img-cont {
-    border-radius: 10px 0 0 0;
-  }
-  .message .img-cont img {
-    transform: translate(25px, 25px);
-  }
   .contact-us .send-message .inputs-holder .form-group svg {
     left: auto;
     right: 9px;
@@ -863,6 +858,10 @@ body[dir="rtl"] {
   .networking .caption {
     left: auto;
     right: 5%;
+  }
+  .dropdown-menu{
+    left: 0;
+    right: auto;
   }
 }
 

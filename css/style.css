@@ -58,6 +58,9 @@ h2,
     .navbar .navbar-nav .nav-item.active .nav-link {
       color: #158ac0;
       font-weight: bold; }
+  .navbar .dropdown-menu {
+    left: auto;
+    right: 0; }
   .navbar .sign {
     display: flex; }
     @media (max-width: 991px) {
@@ -129,6 +132,9 @@ h2,
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+  @media (max-width: 767px) {
+    .slider {
+      height: auto; } }
   .slider .head {
     height: 250px;
     width: 70%;
@@ -182,9 +188,14 @@ h2,
 /* start about us*/
 .about-us {
   padding: 64px 0;
+  padding-bottom: 36px;
   background-color: #f1f1f1; }
   .about-us .about-content h2 {
     position: relative; }
+    @media (max-width: 425px) {
+      .about-us .about-content h2 {
+        font-size: 24px;
+        font-weight: 600; } }
     .about-us .about-content h2:after {
       content: "";
       position: absolute;
@@ -216,18 +227,18 @@ h2,
     .about-us .about-content button:hover {
       background-color: #158ac0; }
   .about-us .img-cont {
-    border: 15px solid #158ac0;
-    border-radius: 10px 0 10px;
     margin: 32px auto; }
     @media (max-width: 991px) {
       .about-us .img-cont {
         margin: 24px auto !important; } }
     .about-us .img-cont img {
       width: 100%;
-      transform: translate(25px, 25px);
       transition: 0.4s all ease-in-out; }
 
 /*message*/
+@media (max-width: 991px) {
+  .message {
+    padding-top: 0; } }
 .message ul {
   margin-top: 40px; }
   .message ul li {
@@ -238,10 +249,6 @@ h2,
     .message ul li span {
       color: #7a7a7a;
       font-weight: 600; }
-.message .img-cont {
-  border-radius: 0px 10px 0px; }
-  .message .img-cont img {
-    transform: translate(-25px, 25px); }
 
 /*services */
 /* start whats on  */
@@ -659,20 +666,15 @@ footer {
 body[dir="rtl"] .about-us .about-content h2:after {
   left: auto;
   right: 0; }
-body[dir="rtl"] .about-us .img-cont img {
-  transform: translate(-25px, 25px); }
-body[dir="rtl"] .about-us .img-cont {
-  border-radius: 0px 10px 0px; }
-body[dir="rtl"] .message .img-cont {
-  border-radius: 10px 0 0 0; }
-body[dir="rtl"] .message .img-cont img {
-  transform: translate(25px, 25px); }
 body[dir="rtl"] .contact-us .send-message .inputs-holder .form-group svg {
   left: auto;
   right: 9px; }
 body[dir="rtl"] .networking .caption {
   left: auto;
   right: 5%; }
+body[dir="rtl"] .dropdown-menu {
+  left: 0;
+  right: auto; }
 
 .my-alert {
   background: transparent;

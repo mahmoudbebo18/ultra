@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   <!-- NavBar -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index-en.html">
         <img src="imgs/logo.jpeg" width="120" height="60" alt="logo" />
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,27 +65,27 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item ">
-            <a class="nav-link" href="#">Home
+            <a class="nav-link" href="index-en.html">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="index-en.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Our Message</a>
+            <a class="nav-link" href="index-en.html">Our Message</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="index-en.html">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Partners</a>
+            <a class="nav-link" href="index-en.html">Partners</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Recruitment</a>
+            <a class="nav-link" href="index-en.html">Recruitment</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="contact.html">Contact Us </a>
+            <a class="nav-link" href="contact.php">Contact Us </a>
           </li>
         </ul>
         <div class="sign lang-switch">
@@ -101,11 +101,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
               </svg>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a href="contact.html" class="dropdown-item">
+              <a href="contact.php" class="dropdown-item">
                 <img src="imgs/enFlag.png" alt="" width="25px" height="25px" />
                 English
               </a>
-              <a href="contact-ar.html" class="dropdown-item">
+              <a href="contact-ar.php" class="dropdown-item">
                 <img src="imgs/arFlag.png" alt="" width="25px" height="25px" />
                 Arabic
               </a>
@@ -125,63 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       <p class="contact-desc">
         Keep in Touch
       </p>
-
-      <form class="send-message">
-        <div class="d-flex  inputs-holder">
-          <div class="form-group">
-            <input class="form-control" type="text" placeholder="Name" />
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <circle cx="12" cy="7" r="4" />
-              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-            </svg>
-          </div>
-          <div class="form-group">
-            <input class="form-control" type="email" placeholder="Email" />
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-at" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <circle cx="12" cy="12" r="4" />
-              <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28" />
-            </svg>
-
-
-          </div>
-          <div class="form-group">
-            <input class="form-control" type="number" placeholder="Phone" />
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <rect x="7" y="4" width="10" height="16" rx="1" />
-              <line x1="11" y1="5" x2="13" y2="5" />
-              <line x1="12" y1="17" x2="12" y2="17.01" />
-            </svg>
-          </div>
-          <div class="form-group">
-            <input class="form-control" type="text" placeholder="Subject" />
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
-              <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
-              <line x1="16" y1="5" x2="19" y2="8" />
-            </svg>
-          </div>
-          <div class="form-group  the-message-holder">
-            <textarea class="form-control" rows="3" type="text" placeholder="Message"></textarea>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-forward" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" />
-              <path d="M3 6l9 6l9 -6" />
-              <path d="M15 18h6" />
-              <path d="M18 15l3 3l-3 3" />
-            </svg>
-          </div>
-          <div class="form-group">
-            <button class="btn btn-primary"> Send </button>
-          </div>
-        </div>
-      </form>
-
-      <form class="text-right myForm" action=" <?php echo $_SERVER['PHP_SELF'] ?> " method="POST">
-
+      <form class="send-message myForm" action=" <?php echo $_SERVER['PHP_SELF'] ?> " method="POST">
         <!-- server side validation  -->
         <?php if (!empty($formErrors)) { ?>
           <div class="alert alert-danger">
@@ -198,63 +142,74 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <?php if (isset($success)) {
           echo $success;
         } ?>
-        <div class="form-group">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a29061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <circle cx="12" cy="7" r="4" />
-            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-          </svg>
-          <input type="text" name="name" class="form-control userName" placeholder="Name" value="<?php if (isset($name)) {
-                                                                                                    echo $name;
-                                                                                                  } ?>">
+        <div class="d-flex  inputs-holder">
+          <div class="form-group">
+            <input class="form-control userName" name="name" type="text" value="<?php if (isset($name)) {
+                                                                                  echo $name;
+                                                                                } ?>" placeholder="Name " />
 
-          <div class="alert alert-danger my-alert">
-            Name Must Be More Than 3 Characters
+            <div class="alert alert-danger my-alert">
+             Name Must Be More Than 3 Characters
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="7" r="4" />
+              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+            </svg>
+          </div>
+          <div class="form-group">
+            <input class="form-control myMail" name="email" type="email" value="<?php if (isset($email)) {
+                                                                                  echo $email;
+                                                                                } ?>" placeholder="Email " />
+
+            <div class="alert alert-danger my-alert">
+             Email Required
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-at" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="12" r="4" />
+              <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28" />
+            </svg>
+
+
+          </div>
+          <div class="form-group">
+            <input class="form-control" name="phone" type="number" value="<?php if (isset($phone)) {
+                                                                            echo $phone;
+                                                                          } ?>" placeholder="Phone" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <rect x="7" y="4" width="10" height="16" rx="1" />
+              <line x1="11" y1="5" x2="13" y2="5" />
+              <line x1="12" y1="17" x2="12" y2="17.01" />
+            </svg>
+          </div>
+          <div class="form-group">
+            <input class="form-control"type="text" placeholder="Subject" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
+              <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
+              <line x1="16" y1="5" x2="19" y2="8" />
+            </svg>
+          </div>
+          <div class="form-group  the-message-holder">
+            <textarea class="form-control myMsg" rows="3" name="message" type="text" placeholder="Message "></textarea>
+            <div class="alert alert-danger my-alert">
+                       Message Must Be More Than 10 Characters 
+                    </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-forward" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" />
+              <path d="M3 6l9 6l9 -6" />
+              <path d="M15 18h6" />
+              <path d="M18 15l3 3l-3 3" />
+            </svg>
+          </div>
+          <div class="form-group m-0">
+            <button class="btn btn-primary"> Send  </button>
           </div>
         </div>
-        <div class="form-group">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-at" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a29061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <circle cx="12" cy="12" r="4" />
-            <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28" />
-          </svg>
-          <input type="text" name="email" class="form-control myMail" placeholder="Email" value="<?php if (isset($email)) {
-                                                                                                    echo $email;
-                                                                                                  } ?>">
-
-          <div class="alert alert-danger my-alert">
-            Email Required
-          </div>
-        </div>
-        <div class="form-group">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a29061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <rect x="7" y="4" width="10" height="16" rx="1" />
-            <line x1="11" y1="5" x2="13" y2="5" />
-            <line x1="12" y1="17" x2="12" y2="17.01" />
-          </svg>
-          <input type="number" name="phone" class="form-control" placeholder="Phone" value="<?php if (isset($phone)) {
-                                                                                              echo $phone;
-                                                                                            } ?>">
-        </div>
-        <div class="form-group message">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-forward" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a29061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" />
-            <path d="M3 6l9 6l9 -6" />
-            <path d="M15 18h6" />
-            <path d="M18 15l3 3l-3 3" />
-          </svg>
-          <textarea rows="4" name="message" class="form-control myMsg" placeholder="Message ">
-            <?php if (isset($message)) {
-              echo $message;
-            } ?></textarea>
-          <div class="alert alert-danger my-alert">
-            Message Must Be More Than 10 Characters
-          </div>
-        </div>
-
-        <button class="btn btn-primary form-control">Send</button>
       </form>
     </div>
   </div>
@@ -301,7 +256,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <line x1="15" y1="9" x2="20" y2="4" />
                 <polyline points="15 5 15 9 19 9" />
               </svg>
-              <span> +249117177717 (Sales ) </span>
+              <span> +249117177717 </span>
             </li>
           </ul>
         </div>

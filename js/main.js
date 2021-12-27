@@ -1,73 +1,71 @@
-//form validation 
-$(document).ready(function(){
-    console.log("dsfsfsfsd");
-    var userEror = true,
-        mailError = true,
-        msgError = true;
- 
+//form validation
+$(document).ready(function () {
+  console.log("dsfsfsfsd");
+  var userEror = true,
+    mailError = true,
+    msgError = true;
 
-    $('.userName').blur(function(){
+  $(".navbar-nav .nav-link").click(function () {
+    $(this).parent().addClass("active").siblings().removeClass("active");
+    $("body, html").animate(
+      {
+        // scrollTop = divId.offset().top
+        scrollTop:
+          $("#" + $(this).data("target")).offset().top -
+          ($(".navbar").innerHeight() + 1),
+      },
+      400
+    );
+  });
 
-        if( $(this).val().length <= 3 ){
+  $(".userName").blur(function () {
+    if ($(this).val().length <= 3) {
+      $(this).css("border", "1px solid #f00");
 
+      $(this).parent().find(".my-alert").fadeIn(200);
 
-            $(this).css('border', '1px solid #f00')
+      userEror = true;
+    } else {
+      $(this).css("border", "1px solid #080");
 
-            $(this).parent().find('.my-alert').fadeIn(200)
+      $(this).parent().find(".my-alert").fadeOut(200);
+      userEror = false;
+    }
+  });
 
-            userEror = true;
+  $(".myMail").blur(function () {
+    if ($(this).val().length == "") {
+      $(this).css("border", "1px solid #f00");
 
-        }else{
-            $(this).css('border', '1px solid #080')
+      $(this).parent().find(".my-alert").fadeIn(200);
+      mailError = true;
+    } else {
+      $(this).css("border", "1px solid #080");
 
-            $(this).parent().find('.my-alert').fadeOut(200);
-            userEror = false;
+      $(this).parent().find(".my-alert").fadeOut(200);
+      mailError = false;
+    }
+  });
 
-        }
-    });
+  $(".myMsg").blur(function () {
+    if ($(this).val().length < 10) {
+      $(this).css("border", "1px solid #f00");
 
-    $('.myMail').blur(function(){
+      $(this).parent().find(".my-alert").fadeIn(200);
+      msgError = true;
+    } else {
+      $(this).css("border", "1px solid #080");
 
-        if( $(this).val().length == '' ){
+      $(this).parent().find(".my-alert").fadeOut(200);
+      msgError = false;
+    }
+  });
 
+  $(".myForm").submit(function (e) {
+    if (userEror === true || mailError === true || msgError === true) {
+      e.preventDefault();
 
-            $(this).css('border', '1px solid #f00')
-
-            $(this).parent().find('.my-alert').fadeIn(200)
-            mailError = true;
-
-        }else{
-            $(this).css('border', '1px solid #080')
-            
-            $(this).parent().find('.my-alert').fadeOut(200)
-            mailError = false;
-        }
-    })
-
-    $('.myMsg').blur(function(){
-
-        if( $(this).val().length < 10 ){
-
-
-            $(this).css('border', '1px solid #f00')
-
-            $(this).parent().find('.my-alert').fadeIn(200);
-            msgError = true
-
-        }else{
-            $(this).css('border', '1px solid #080')
-            
-            $(this).parent().find('.my-alert').fadeOut(200);
-            msgError = false 
-        }
-    })
-
-
-    $('.myForm').submit (function(e){
-        if(userEror === true || mailError === true || msgError === true ){
-            e.preventDefault();
-
-            $('.myMsg , .myMail ,.userName ').blur()
-        }
-    })
-})
+      $(".myMsg , .myMail ,.userName ").blur();
+    }
+  });
+});

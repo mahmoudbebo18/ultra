@@ -11,15 +11,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
   $formErrors = array();
   if (strlen($name) <= 3) {
-    $formErrors[] = 'Name Must be More Than 3 Characters ';
+    $formErrors[] = 'الاسم لابد ان يكون اكثر من 3 حروف  ';
   }
   if (strlen($message) < 10) {
-    $formErrors[] = 'Message  Must be More Than 10 Characters ';
+    $formErrors[] = 'لابد ان يكون محتوى الرسالة اكثر من 10 حروف ';
   }
 
   $headers = 'From : ' . $email;
-  $myEmail = 'mahmoudelkhateb18@gmail.com';
-  $subject = 'Contact Form';
+  $myEmail = 'Info@ultra.com.sd';
+  $subject = 'استفسار';
   if (empty($formErrors)) {
     mail($myEmail, $subject, $message, $headers);
     $name = '';
@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $phone = '';
     $message = '';
     $success = '<div class="success-msg alert alert-success"> 
-            <h5> Thanks For Your Message  </h5>
-            <p> We Will Back For You Soon  </p>
+            <h5> شكرا لرسالتك   </h5>
+            <p> سنعود لمراسلتك في اقرب وقت   </p>
         </div>';
   }
 }
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   <!-- NavBar -->
   <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="index-ar.html">
+        <a class="navbar-brand" href="index.html">
           <img src="imgs/logo.jpeg" width="120" height="60" alt="logo" />
         </a>
         <button
@@ -73,28 +73,28 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="index.html"
                 >الرئيسية
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">نبذة عنا </a>
+              <a class="nav-link" href="index.html">نبذة عنا </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">رسالتنا</a>
+              <a class="nav-link" href="index.html">رسالتنا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">خدماتنا</a>
+              <a class="nav-link" href="index.html">خدماتنا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">شركاؤنا</a>
+              <a class="nav-link" href="index.html">شركاؤنا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">التوظيف</a>
+              <a class="nav-link" href="index.html">التوظيف</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact-ar.html"> اتصل بنا </a>
+              <a class="nav-link" href="contact-ar.php"> اتصل بنا </a>
             </li>
           </ul>
           <div class="sign lang-switch">
@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </svg>
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a href="camera.html" class="dropdown-item">
+                <a href="contact.php" class="dropdown-item">
                   <img
                     src="imgs/enFlag.png"
                     alt=""
@@ -137,7 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                   />
                   English
                 </a>
-                <a href="camera-ar.html" class="dropdown-item">
+                <a href="contact-ar.php" class="dropdown-item">
                   <img
                     src="imgs/arFlag.png"
                     alt=""
@@ -244,7 +244,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
               <path d="M18 15l3 3l-3 3" />
             </svg>
           </div>
-          <div class="form-group">
+          <div class="form-group m-0">
             <button class="btn btn-primary"> ارسال  </button>
           </div>
         </div>
@@ -330,7 +330,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                   <line x1="15" y1="9" x2="20" y2="4" />
                   <polyline points="15 5 15 9 19 9" />
                 </svg>
-                <span> +249117177717 (للدعايا ) </span>
+                <span> +249117177717 </span>
               </li>
             </ul>
           </div>
