@@ -541,6 +541,9 @@ footer {
   }
   .left-footer {
     text-align: start;
+    li:last-of-type span{
+      direction: ltr ;
+    }
     ul {
       padding: 0;
       li {

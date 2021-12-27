@@ -345,9 +345,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <div class="links-holder">
               <h3 class="text-uppercase">روابط</h3>
               <ul class="list-unstyled">
-                <li><a href="#">الرئيسية </a></li>
-                <li><a href="#">نبذة عنا</a></li>
-                <li><a href="#"> اتصل بنا </a></li>
+                <li><a href="index.html">الرئيسية </a></li>
+                <li><a href="index.html">نبذة عنا</a></li>
+                <li><a href="index.html"> اتصل بنا </a></li>
               </ul>
             </div>
           </div>

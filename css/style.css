@@ -428,6 +428,8 @@ footer {
     font-weight: bold; }
   footer .left-footer {
     text-align: start; }
+    footer .left-footer li:last-of-type span {
+      direction: ltr; }
     footer .left-footer ul {
       padding: 0; }
       footer .left-footer ul li {
