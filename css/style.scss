@@ -898,6 +898,7 @@ body[dir="rtl"] {
   color: #fff;
   text-decoration: none;
   transition: .3s;
+  z-index: 999;
   &:hover {
       transform: scale(1.01);
       color: #fff
