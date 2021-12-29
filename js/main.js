@@ -18,6 +18,18 @@ $(document).ready(function () {
     );
   });
 
+  $('.footer-about').click(function () {
+    $("body, html").animate(
+      {
+        // scrollTop = divId.offset().top
+        scrollTop:
+          $("#" + $(this).data("target")).offset().top -
+          ($(".navbar").innerHeight() + 1),
+      },
+      400
+    );
+  });
+
   $(".userName").blur(function () {
     if ($(this).val().length <= 3) {
       $(this).css("border", "1px solid #f00");
@@ -68,4 +80,7 @@ $(document).ready(function () {
       $(".myMsg , .myMail ,.userName ").blur();
     }
   });
+
+
+
 });

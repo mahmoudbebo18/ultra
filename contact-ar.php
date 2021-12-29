@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
               <a class="nav-link" href="index.html">شركاؤنا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">التوظيف</a>
+              <a class="nav-link" href="recruitment-ar.html">التوظيف</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact-ar.php"> اتصل بنا </a>
@@ -347,7 +347,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
               <ul class="list-unstyled">
                 <li><a href="index.html">الرئيسية </a></li>
                 <li><a href="index.html">نبذة عنا</a></li>
-                <li><a href="index.html"> اتصل بنا </a></li>
+                <li><a href="contact-ar.php"> اتصل بنا </a></li>
               </ul>
             </div>
           </div>

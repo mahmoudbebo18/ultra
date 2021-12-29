@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <a class="nav-link" href="index-en.html">Partners</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index-en.html">Recruitment</a>
+            <a class="nav-link" href="recruitment.html">Recruitment</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="contact.php">Contact Us </a>
@@ -271,7 +271,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <ul class="list-unstyled">
               <li><a href="index-en.html">Home</a></li>
               <li><a href="index-en.html">About Us </a></li>
-              <li><a href="index-en.html">Contact Us </a></li>
+              <li><a href="contact.php">Contact Us </a></li>
             </ul>
           </div>
         </div>
