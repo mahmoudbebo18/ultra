@@ -26,6 +26,6 @@ $validator->field('comments')->maxLength(6000);
 $pp->attachFiles(['image']);
 
 
-$pp->sendEmailTo('mahmoudelkhateb18@gmail.com'); // ← Your email here
+$pp->sendEmailTo('Info@ultra.com.sd'); // ← Your email here
 
 echo $pp->process($_POST);

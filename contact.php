@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   }
 
   $headers = 'From : ' . $email . '\r\n';
-  $myEmail = 'mahmoudelkhateb18@gmail.com';
+  $myEmail = 'Info@ultra.com.sd';
   $subject = 'Contact Form';
   if (empty($formErrors)) {
     mail($myEmail, $subject, $message, $headers);
